@@ -1,0 +1,30 @@
+<div>
+  <mat-table [dataSource]="dataSource">
+    <ng-container matColumnDef="AUTO_ID">
+      <mat-header-cell *matHeaderCellDef>AUTO_ID</mat-header-cell>
+      <mat-cell *matCellDef="let user">{{user.AUTO_ID}}</mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="PRDCR_APP_CD">
+      <mat-header-cell *matHeaderCellDef>PRDCR_APP_CD</mat-header-cell>
+      <mat-cell *matCellDef="let user">{{user.PRDCR_APP_CD}}</mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="PRDCR_PRCS_CD">
+      <mat-header-cell *matHeaderCellDef>PRDCR_PRCS_CD</mat-header-cell>
+      <mat-cell *matCellDef="let user">{{user.PRDCR_PRCS_CD}}</mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="SRVC_CD">
+      <mat-header-cell *matHeaderCellDef>SRVC_CD</mat-header-cell>
+      <mat-cell *matCellDef="let user">{{user.SRVC_CD}}</mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="TRNSN_CND">
+      <mat-header-cell *matHeaderCellDef>TRNSN_CND</mat-header-cell>
+      <mat-cell *matCellDef="let user">{{user.TRNSN_CND}}</mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="LEVEL">
+      <mat-header-cell *matHeaderCellDef>LEVEL</mat-header-cell>
+      <mat-cell *matCellDef="let user">{{user.LEVEL}}</mat-cell>
+    </ng-container>
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns:displayedColumns"></mat-row>
+  </mat-table>
+</div>
